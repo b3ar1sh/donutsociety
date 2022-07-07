@@ -393,7 +393,7 @@ Webflow.env = function (mode) {
   if (mode === 'frame') {
     return window !== window.top;
   }
-}; // Feature detects + browser sniffs  à² _à² 
+}; // Feature detects + browser sniffs  ಠ_ಠ
 
 
 var userAgent = navigator.userAgent.toLowerCase();
@@ -2298,7 +2298,7 @@ function createStore(reducer, preloadedState, enhancer) {
    * example, see the documentation for the `redux-thunk` package. Even the
    * middleware will eventually dispatch plain object actions using this method.
    *
-   * @param {Object} action A plain object representing â€œwhat changedâ€. It is
+   * @param {Object} action A plain object representing “what changed”. It is
    * a good idea to keep actions serializable so you can record and replay user
    * sessions, or use the time travelling `redux-devtools`. An action must have
    * a `type` property which may not be `undefined`. It is a good idea to use
@@ -4597,7 +4597,7 @@ var store = __webpack_require__(40);
 })('versions', []).push({
   version: '3.19.0',
   mode: IS_PURE ? 'pure' : 'global',
-  copyright: 'Â© 2021 Denis Pushkarev (zloirock.ru)'
+  copyright: '© 2021 Denis Pushkarev (zloirock.ru)'
 });
 
 
@@ -6237,7 +6237,7 @@ function bouncePast(pos) {
 /**
  * https://github.com/gre/bezier-easing
  * BezierEasing - use bezier curve for transition easing function
- * by GaÃ«tan Renaudeau 2014 - 2015 â€“ MIT License
+ * by Gaëtan Renaudeau 2014 - 2015 – MIT License
  */
 
 // These values are established by empiricism with tests (tradeoff: performance VS precision)
@@ -7910,6 +7910,16 @@ Webflow.define('brand', module.exports = function ($) {
     $(brandElement).attr('style', fullScreen ? 'display: none !important;' : '');
   }
 
+  function createBadge() {
+    var $brand = $('<a class="w-webflow-badge"></a>').attr('href', 'https://webflow.com?utm_campaign=brandjs');
+    var $logoArt = $('<img>').attr('src', 'https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon.f67cd735e3.svg').attr('alt', '').css({
+      marginRight: '8px',
+      width: '16px'
+    });
+    var $logoText = $('<img>').attr('src', 'https://d1otoma47x30pg.cloudfront.net/img/webflow-badge-text.6faa6a38cd.svg').attr('alt', 'Made in Webflow');
+    $brand.append($logoArt, $logoText);
+    return $brand[0];
+  }
 
   function ensureBrand() {
     var found = $body.children(namespace);
@@ -8727,7 +8737,7 @@ Webflow.define('focus-visible', module.exports = function () {
 
     function onInitialPointerMove(e) {
       // Work around a Safari quirk that fires a mousemove on <html> whenever the
-      // window blurs, even if you're tabbing out of the page. Â¯\_(ãƒ„)_/Â¯
+      // window blurs, even if you're tabbing out of the page. ¯\_(ツ)_/¯
       if (e.target.nodeName && e.target.nodeName.toLowerCase() === 'html') {
         return;
       }
@@ -15207,7 +15217,7 @@ var continuousInstance = function continuousInstance(state, action) {
     for (var _i2 = 0, _length2 = destinationKeys.length; _i2 < _length2; _i2++) {
       var _key = destinationKeys[_i2];
       var fromVal = getItemConfigByKey(actionTypeId, _key, fromActionItem.config);
-      var toVal = getItemConfigByKey(actionTypeId, _key, toActionItem.config); // $FlowFixMe â€” toVal and fromVal could potentially be null, need to update type higher to determine number
+      var toVal = getItemConfigByKey(actionTypeId, _key, toActionItem.config); // $FlowFixMe — toVal and fromVal could potentially be null, need to update type higher to determine number
 
       var diff = toVal - fromVal; // $FlowFixMe
 
@@ -16727,22 +16737,22 @@ var _constants$IX2EngineC = _constants.IX2EngineConstants,
     WF_PAGE = _constants$IX2EngineC.WF_PAGE;
 
 function setStyle(element, prop, value) {
-  // $FlowIgnore â€” flow complains that prop should be a number. Will need to update upstream
+  // $FlowIgnore — flow complains that prop should be a number. Will need to update upstream
   element.style[prop] = value;
 }
 
 function getStyle(element, prop) {
-  // $FlowIgnore â€” flow complains that prop should be a number. Will need to update upstream
+  // $FlowIgnore — flow complains that prop should be a number. Will need to update upstream
   return element.style[prop];
 }
 
 function getProperty(element, prop) {
-  // $FlowIgnore â€” flow complains that prop should be a number. Will need to update upstream
+  // $FlowIgnore — flow complains that prop should be a number. Will need to update upstream
   return element[prop];
 }
 
 function matchSelector(selector) {
-  // $FlowIgnore â€” ELEMENT_MATCHES is the name of the method on the element's prototype depending on browser
+  // $FlowIgnore — ELEMENT_MATCHES is the name of the method on the element's prototype depending on browser
   return function (element) {
     return element[ELEMENT_MATCHES](selector);
   };
@@ -16759,7 +16769,7 @@ function getQuerySelector(_ref) {
       var pair = id.split(IX2_ID_DELIMITER);
       var pageId = pair[0];
       nodeId = pair[1]; // Short circuit query if we're on the wrong page
-      // $FlowIgnore â€” if documentElement is null crash
+      // $FlowIgnore — if documentElement is null crash
 
       if (pageId !== document.documentElement.getAttribute(WF_PAGE)) {
         return null;
@@ -16773,7 +16783,7 @@ function getQuerySelector(_ref) {
 }
 
 function getValidDocument(pageId) {
-  if (pageId == null || // $FlowIgnore â€” if documentElement is null crash
+  if (pageId == null || // $FlowIgnore — if documentElement is null crash
   pageId === document.documentElement.getAttribute(WF_PAGE)) {
     return document;
   }
@@ -16845,14 +16855,14 @@ function getSiblingElements() {
 }
 
 var getClosestElement = Element.prototype.closest ? function (element, selector) {
-  // $FlowIgnore â€” ELEMENT_MATCHES is the name of the method on the element's prototype depending on browser
+  // $FlowIgnore — ELEMENT_MATCHES is the name of the method on the element's prototype depending on browser
   if (!document.documentElement.contains(element)) {
     return null;
   }
 
   return element.closest(selector);
 } : function (element, selector) {
-  // $FlowIgnore â€” if documentElement is null crash
+  // $FlowIgnore — if documentElement is null crash
   if (!document.documentElement.contains(element)) {
     return null;
   }
@@ -16860,7 +16870,7 @@ var getClosestElement = Element.prototype.closest ? function (element, selector)
   var el = element;
 
   do {
-    // $FlowIgnore â€” if documentElement is null crash
+    // $FlowIgnore — if documentElement is null crash
     if (el[ELEMENT_MATCHES] && el[ELEMENT_MATCHES](selector)) {
       return el;
     }
@@ -18814,7 +18824,7 @@ Webflow.define('touch', module.exports = function ($) {
     el.addEventListener('mouseout', cancel, false);
 
     function start(evt) {
-      // We donâ€™t handle multi-touch events yet.
+      // We don’t handle multi-touch events yet.
       var touches = evt.touches;
 
       if (touches && touches.length > 1) {
@@ -19030,7 +19040,7 @@ Webflow.define('navbar', module.exports = function ($, _) {
     if (navBrandLink && navBrandLink.attr('href') === '/' && navBrandLink.attr('aria-label') == null) {
       navBrandLink.attr('aria-label', 'home');
     } //   VoiceOver bug, when items that disallow user selection are focused
-    // VoiceOver gets confused and scrolls to the end of the page. Â¯\_(ãƒ„)_/Â¯
+    // VoiceOver gets confused and scrolls to the end of the page. ¯\_(ツ)_/¯
 
 
     data.button.attr('style', '-webkit-user-select: text;'); // Add attributes to toggle element
