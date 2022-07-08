@@ -93,7 +93,7 @@ a {
   display: flex;
   height: 110vh;
   padding-top: 0vh;
-  padding-bottom: 0px;
+  padding-bottom: 190px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1313,9 +1313,9 @@ a {
 .team-grid {
   display: -ms-grid;
   display: grid;
-  width: 18x00px;
+  width: 1800px;
   max-width: 100%;
-  margin-top: 0px;
+  margin-top: 260px;
   margin-right: auto;
   margin-left: auto;
   grid-auto-columns: 1fr;
