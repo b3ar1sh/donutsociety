@@ -1,7 +1,6 @@
 /*! jQuery v3.5.1 | (c) JS Foundation and other contributors | jquery.org/license */ ! function(e, t) {
-    if(!$.mobile.gradeA()​){
-        alert('Please view this site on a desktop');
-    }​​​​​​​​
+
+    ​​​​​​​​
     
     
     "use strict";
