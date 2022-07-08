@@ -91,9 +91,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 110vh;
+  height: 130vh;
   padding-top: 0vh;
-  padding-bottom: 190px;
+  padding-bottom: 100px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
