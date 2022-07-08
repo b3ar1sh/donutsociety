@@ -67,8 +67,8 @@ a {
   display: flex;
   width: 100%;
   height: auto;
-  margin-top: -60px;
-  margin-bottom: -95px;
+  margin-top: -10px;
+  margin-bottom: -165px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -1369,7 +1369,7 @@ a {
 .testimonial-stack {
   position: relative;
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 30px;
   padding: 0px 30px;
   border-bottom: 1px none #e4ebf3;
   font-family: 'Paytone One', sans-serif;
