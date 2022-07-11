@@ -226,7 +226,7 @@ label {
 }
 @media screen and (max-width:479px) {
     .w-container {
-        max-width: none
+        max-width: 376
     }
 }
 .w-nav {
