@@ -69225,7 +69225,7 @@ function print() { __p += __j.call(arguments, '') }
   };
   g();
   var oS = le(Ut(), 1);
-  var hQ = ({ children: t = "Select Wallet", onClick: e, ...r }) => {
+  var hQ = ({ children: t = "Connect Wallet", onClick: e, ...r }) => {
     let { visible: n, setVisible: i } = Dm(),
       o = (0, oS.useCallback)(
         (s) => {
